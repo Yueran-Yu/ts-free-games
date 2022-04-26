@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import {Link} from "react-router-dom";
 import {
 	backgroundColor,
-	primaryColor,
 	primaryTextColor,
 	secondaryColor,
 	secondaryTextColor,

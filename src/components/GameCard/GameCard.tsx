@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {Img, StyledLink, Title, Details, Description, Genre, Icon} from "../../styles/main.styles";
-import WindowIcon from '../assets/icons/windows.svg';
-import Browser from '../assets/icons/browser.svg';
+import w from "../../assets/windows.svg";
+import b from "../../assets/browser.svg";
 
 export const GameCard: FC<GameCardProps> = ({content}) => {
 	const {id, title, thumbnail, short_description, genre, platform} = content
@@ -9,9 +9,9 @@ export const GameCard: FC<GameCardProps> = ({content}) => {
 	const icons = platform.split(',').map(p => {
 		const device = p.trim()
 		if (device.toLowerCase().includes("window")) {
-			return <Icon key={`${id}-windows`} alt="windows icon" src={WindowIcon}/>
+			return <Icon key={`${id}-windows`} alt="windows icon" src={w}/>
 		} else {
-			return <Icon key={`${id}-browser`} alt="browser icon" src={`${Browser}`}/>
+			return <Icon key={`${id}-browser`} alt="browser icon" src={b}/>
 		}
 	})
 
