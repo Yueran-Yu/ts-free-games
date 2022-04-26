@@ -2,3 +2,4 @@
 - Rapid API
 - Custom Error Boundary
 - Filter the data by passing the params directly to the axios function
+- fixed the SVG loader by adding the snippets into webpack.config.js with this [Article](https://www.pluralsight.com/guides/how-to-load-svg-with-react-and-webpack)
