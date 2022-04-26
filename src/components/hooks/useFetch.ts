@@ -1,11 +1,12 @@
-import React, {ReactElement, useEffect, useState} from 'react';
-import {GameList} from './GameList';
-import axios from 'axios'
+import {useEffect, useState} from "react";
+import axios from "axios";
 import {API_HOST, API_KEY} from "./constants";
 
-export const GameListData = (): ReactElement => {
+export const useFetch = (params: FilterTypes): ResType => {
 	const [games, setGames] = useState<GameType[]>([])
 	const [err, setErr] = useState<string>('')
+
+	const {platform, genre, tag, sortBy} = params
 
 	useEffect(() => {
 		axios.get('/games', {
@@ -15,12 +16,14 @@ export const GameListData = (): ReactElement => {
 				'X-RapidAPI-Key': API_KEY
 			},
 			params: {
-				platform: 'browser'
+				platform,
+				category: genre,
+				tag,
+				'sort-by': sortBy
 			}
 		}).then(res => setGames(res.data))
 			.catch(e => setErr(e.message))
-	}, [])
-	return (
-		<GameList err={err} games={games}/>
-	)
+	}, [platform, genre, sortBy, tag])
+
+	return {games: games, error: err}
 }

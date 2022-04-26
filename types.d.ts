@@ -12,16 +12,23 @@ interface GameType {
 	freetogame_portfile_url: string
 }
 
-interface GameDataProps {
-	err?: string
-	games: GameType[]
-}
-
 interface GameCardProps {
 	content: GameType
 }
 
 interface FilterProps {
-	onChange: (e: React.ChangeEvent<HTMLFormElement>) => void
+	handleOnChange: (e: React.ChangeEvent<HTMLFormElement>) => void
 }
 
+interface FilterTypes {
+	platform: string
+	sortBy: string
+	genre?: string
+	tag?: string
+}
+
+
+interface ResType {
+	games: GameType[]
+	error: string
+}

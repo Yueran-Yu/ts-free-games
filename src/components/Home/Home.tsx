@@ -1,6 +1,9 @@
-import React, {ReactElement} from 'react';
-import {GameListData} from '../GameList/GameList.data';
+import React from 'react';
+import {GameList} from "../GameList/GameList";
 
-export const Home = (): ReactElement => <main><GameListData/></main>
+export const Home = (): JSX.Element =>
+	<main>
+		<GameList/>
+	</main>
 
 

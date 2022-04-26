@@ -107,3 +107,42 @@ export const Icon = styled.img`
   height: 20px;
   margin-right: 8px;
 `
+
+export const Form = styled.form`
+  display: flex;
+  justify-content: space-between;
+  max-width: 542px;
+  padding: 0 16px;
+  margin: 24px auto;
+  color: ${primaryTextColor};
+  box-sizing: border-box;
+  @media (min-width: ${breakpoints.tablet}) {
+    max-width: ${breakpoints.tablet};
+  }
+  @media (min-width: ${breakpoints.desktop}) {
+    max-width: 1010px;
+  }
+`
+
+export const Label = styled.label`
+  display: inline-block;
+  margin-right: 16px;
+  flex-basis: 25%;
+  font-weight: bold;
+	font-size: 20px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+`
+
+export const Select = styled.select`
+  width: 100%;
+  margin-top: 8px;
+  border-radius: 5px;
+  color: ${secondaryTextColor};
+  line-height: 30px;
+  font-size: 15px;
+  height: 30px;
+  background-color: ${tertiaryTextColor};
+`
