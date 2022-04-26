@@ -1,3 +1,4 @@
 - React-Router
 - Rapid API
 - Custom Error Boundary
+- Filter the data by passing the params directly to the axios function

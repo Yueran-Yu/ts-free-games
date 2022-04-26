@@ -20,8 +20,8 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "files": ["types.d.ts","svg.types.d.ts"],
+  "files": ["types.d.ts"],
   "include": [
-    "src"
+    "src","svg.types.d.ts"
   ]
 }
